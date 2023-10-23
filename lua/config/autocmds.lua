@@ -1,0 +1,28 @@
+-- Autocmds are automatically loaded on the VeryLazy event
+-- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
+-- Add any additional autocmds here
+
+-- Define the function for running Sass
+-- function RunSass()
+--   -- Save the current directory
+--   local current_dir = vim.fn.getcwd()
+--
+--   -- Change the current directory to the directory of the current file
+--   vim.cmd("lcd " .. vim.fn.expand("%:p:h"))
+--
+--   -- Run the Sass command
+--   vim.cmd("silent !sass " .. vim.fn.expand("%:p") .. " " .. vim.fn.expand("%:t:r.css"))
+--
+--   -- Restore the original current directory
+--   vim.cmd("lcd " .. current_dir)
+-- end
+--
+-- -- Define an autocmd that will run the RunSass function
+-- vim.cmd([[
+--   autocmd BufWritePost <buffer> *.scss call RunSass()
+-- ]])
+
+-- vim.cmd([[
+--   " autocmd BufWritePost *.scss :!sass %:p %:r.css
+--   autocmd bufwritepost [^_]*.sass,[^_]*.scss  silent exec "!sass %:p %:r.css"
+-- ]])
